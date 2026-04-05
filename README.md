@@ -7,8 +7,7 @@ Great as a safety net for AI coding agents (Claude Code, Cursor, Copilot) that r
 ## Install
 
 ```bash
-go build -o recycle ./cmd/recycle/
-sudo mv recycle /usr/local/bin/
+go install github.com/oobagi/recycle-cli/cmd/recycle@latest
 ```
 
 Then alias it in `~/.zshrc`:
