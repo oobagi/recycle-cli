@@ -45,6 +45,10 @@ alias rm='recycle'
 
 Then `rm file.txt` moves to Trash instead of deleting. Use `/bin/rm` when you need real deletion.
 
+## Agentic safety net
+
+AI coding agents (Claude Code, Cursor, Copilot, etc.) frequently run `rm` and `rm -rf` to clean up files, reset state, or retry builds. With the alias in place, every destructive `rm` an agent executes becomes a recoverable Trash operation. If an agent accidentally deletes your source code, config, or anything else — it's sitting in the Trash waiting to be restored. No custom tool integration required; the alias works transparently.
+
 ## How it works
 
 - **Trash** — uses Finder's AppleScript interface (`tell application "Finder" to delete`), so files get native "Put Back" support
