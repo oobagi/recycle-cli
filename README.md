@@ -6,6 +6,8 @@ Great as a safety net for AI coding agents (Claude Code, Cursor, Copilot) that r
 
 ## Install
 
+Requires [Go](https://go.dev/dl/) 1.21+.
+
 ```bash
 go install github.com/oobagi/recycle-cli/cmd/recycle@latest
 ```
