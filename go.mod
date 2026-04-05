@@ -1,3 +1,3 @@
-module github.com/jaden/recycle-cli
+module github.com/oobagi/recycle-cli
 
 go 1.21
