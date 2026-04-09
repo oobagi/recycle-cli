@@ -1,8 +1,16 @@
-# recycle
+<p align="center">
+  <img src="assets/hero.png" alt="recycle" width="128">
+</p>
 
-A safe `rm` replacement for macOS. Moves files to the native Trash instead of permanently deleting them — with full Finder "Put Back" support.
+<h1 align="center">recycle</h1>
 
-Great as a safety net for AI coding agents (Claude Code, Cursor, Copilot) that run `rm -rf` — everything stays recoverable.
+<p align="center">
+  A safe <code>rm</code> replacement for macOS. Moves files to the native Trash instead of permanently deleting them — with full Finder "Put Back" support.
+</p>
+
+<p align="center">
+  Great as a safety net for AI coding agents (Claude Code, Cursor, Copilot) that run <code>rm -rf</code> — everything stays recoverable.
+</p>
 
 ## Install
 
