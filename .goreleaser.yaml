@@ -1,0 +1,46 @@
+version: 2
+
+builds:
+  - main: ./cmd/recycle
+    binary: recycle
+    goos:
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    env:
+      - CGO_ENABLED=1
+    overrides:
+      - goos: darwin
+        goarch: arm64
+        env:
+          - CGO_ENABLED=1
+          - CC=clang
+          - CGO_CFLAGS=-target arm64-apple-macos11
+          - CGO_LDFLAGS=-target arm64-apple-macos11
+      - goos: darwin
+        goarch: amd64
+        env:
+          - CGO_ENABLED=1
+          - CC=clang
+          - CGO_CFLAGS=-target x86_64-apple-macos11
+          - CGO_LDFLAGS=-target x86_64-apple-macos11
+
+universal_binaries:
+  - replace: true
+
+archives:
+  - formats: [tar.gz]
+
+brews:
+  - repository:
+      owner: oobagi
+      name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+    homepage: https://github.com/oobagi/recycle-cli
+    description: Safe rm replacement for macOS — moves files to Trash instead of deleting them
+    license: MIT
+    install: |
+      bin.install "recycle"
+    test: |
+      system "#{bin}/recycle", "--version"

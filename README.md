@@ -6,10 +6,8 @@ Great as a safety net for AI coding agents (Claude Code, Cursor, Copilot) that r
 
 ## Install
 
-Requires [Go 1.21+](https://go.dev/dl/).
-
 ```bash
-go install github.com/oobagi/recycle-cli/cmd/recycle@latest
+brew install oobagi/tap/recycle
 ```
 
 Then alias it in `~/.zshrc`:
